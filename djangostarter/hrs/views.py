@@ -13,6 +13,8 @@ depts_list = [
 ]
 
 def index(request):
+  return render(request, 'index.html', {'depts_list':depts_list})
+"""
   output = StringIO()
   output.write('<html>\n')
   output.write('<head>\n')
@@ -38,6 +40,7 @@ def index(request):
   output.write('</body>\n')
   output.write('</html>\n')
   return HttpResponse(output.getvalue())
+"""
   # return HttpResponse('<h1>Hello, Django!</h1>')
 
 
